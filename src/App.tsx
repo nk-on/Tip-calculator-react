@@ -7,6 +7,8 @@ import DataContainer from './components/Data';
 import { PercentageButton } from './components/PercentageButton';
 import buttons from './buttons';
 function App() {
+  const [buttonsObj,setButtonsObj] = useState([...buttons])
+  console.log(buttonsObj)
   return (
     <>
       <div className="flex bg-[#FFFFFF] w-[90%] h-[481px] rounded-[25px] md:w-[920px]">
@@ -15,11 +17,14 @@ function App() {
           <div className="flex flex-col ">
             Select tip
             <div className='grid grid-cols-3 gap-[5px]'>
-              {buttons.map((buttonObject) => {
+              {buttonsObj.map((buttonObject) => {
                 return (
                   <PercentageButton
                     key={buttonObject.id}
                     percentageRate={buttonObject.rate}
+                    id = {buttonObject.id}
+                    isClicked = {buttonObject.isClicked}
+                    setButtonsObj = {setButtonsObj}
                   />
                 );
               })}
