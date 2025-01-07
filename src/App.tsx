@@ -8,7 +8,7 @@ import buttons from './buttons';
 function App() {
   return (
     <>
-      <div className="bg-[#FFFFFF] w-[90%] h-[481px] rounded-[25px] md:w-[920px]">
+      <div className="flex bg-[#FFFFFF] w-[90%] h-[481px] rounded-[25px] md:w-[920px]">
         <div className="w-[50%] h-[100%] flex flex-col justify-evenly	 border border-red-500 pl-[25px]">
           <Form title={'Bill'} />
           <div className="flex flex-col ">
@@ -25,6 +25,11 @@ function App() {
             </div>
           </div>
           <Form title={'Number of People'} />
+        </div>
+        <div className=' flex justify-center items-center w-[50%] h-[100%]'>
+          <div className='bg-[#00474B] w-[90%] h-[90%] rounded-[25px]'>
+
+          </div>
         </div>
       </div>
     </>
