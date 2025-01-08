@@ -13,12 +13,14 @@ function App() {
   const [percentage,setPercentage] = useState(0);
   return (
     <>
-      <div className="flex bg-[#FFFFFF] w-[90%] h-[481px] rounded-[25px] md:w-[920px]">
-        <div className="w-[50%] h-[100%] flex flex-col justify-evenly	 border border-red-500 pl-[25px]">
+      <div className="flex flex-col md:flex-row bg-[#FFFFFF] w-[90%] h-[481px] rounded-[25px] md:w-[920px]">
+        <div className="w-[90%] h-[100%] md:w-[50%] flex flex-col justify-evenly  pl-[25px]">
           <Form title={'Bill'} setBill = {setBill} setAmountOfPeople = {setAmountOfPeople}/>
           <div className="flex flex-col ">
-            Select tip
-            <div className='grid grid-cols-3 gap-[5px]'>
+            <div className='text-[#5E7A7D] font-bold'>
+              Select tip
+            </div>
+            <div className='grid grid-cols-2 md:grid-cols-3 gap-[5px]'>
               {buttonsObj.map((buttonObject) => {
                 return (
                   <PercentageButton
