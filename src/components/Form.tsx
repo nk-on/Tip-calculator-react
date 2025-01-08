@@ -11,11 +11,12 @@ export default function Form({ title, setBill, setAmountOfPeople }: FormProps) {
         type="number"
         className="bg-[#F3F9FA] w-[90%] h-[48px]"
         onChange={(event) => {
+          const value = Number(event.target.value);
           if (title === "Bill") {
-            setBill(Number(event.target.value));
+            setBill(value);
             return;
           }
-          setAmountOfPeople(Number(event.target.value));
+          setAmountOfPeople(value);
         }}
       />
     </div>
