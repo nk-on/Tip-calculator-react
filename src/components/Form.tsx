@@ -20,7 +20,7 @@ export default function Form({ title, setBill, setAmountOfPeople }: FormProps) {
         }`}
         onChange={(event) => {
           const value = Number(event.target.value);
-          if (value < 0) {
+          if (value <= 0) {
             setError(true);
             event.target.value = "";
             return;

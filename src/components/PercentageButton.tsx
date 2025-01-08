@@ -23,7 +23,7 @@ export function PercentageButton({
     */
   return (
     <button
-      className={`w-[117px] h-[48px] ${
+      className={`w-[117px] h-[48px] text-[#FFFFFF] font-extrabold rounded-[5px] text-[24px] ${
         isClicked ? "bg-[#26C2AE]" : "bg-[#00474B]"
       }`}
       onClick={() => {
