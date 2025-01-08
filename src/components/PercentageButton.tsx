@@ -6,12 +6,16 @@ interface percentageProps {
   setButtonsObj: React.Dispatch<
     React.SetStateAction<{ id: number; rate: number; isClicked: boolean }[]>
   >;
+  setPercentage: React.Dispatch<
+  React.SetStateAction<number>
+>;
 }
 export function PercentageButton({
   percentageRate,
   id,
   isClicked,
   setButtonsObj,
+  setPercentage
 }: percentageProps) {
   /* 1. when user clicks on percentage rate it should be green untill user clicks on another button and this other button
     should become green
@@ -31,6 +35,7 @@ export function PercentageButton({
           }
           return item;
         });
+        setPercentage(percentageRate);
         setButtonsObj([...updatedItems]);
       }}
     >
