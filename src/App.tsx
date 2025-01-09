@@ -44,7 +44,7 @@ function App() {
           />
         </div>
         <div className=" flex justify-center items-center w-[90%] md:w-[50%] h-[100%]">
-          <div className="bg-[#00474B] w-[90%] h-[90%] rounded-[25px]">
+          <div className="bg-[#00474B] w-[90%] h-[90%] rounded-[25px] px-[25px]">
               <DataContainer
                 title="Tip Amount"
                 amount={(bill * percentage) / 100}
