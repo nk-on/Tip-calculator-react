@@ -9,7 +9,8 @@ import buttons from "./buttons";
 interface buttonObjectProp{
   id:number,
   rate:number,
-  isClicked:boolean
+  isClicked:boolean,
+  isCustom:boolean,
 }
 type buttonType = buttonObjectProp[];
 function App() {
@@ -36,6 +37,7 @@ function App() {
                     percentageRate={buttonObject.rate}
                     id={buttonObject.id}
                     isClicked={buttonObject.isClicked}
+                    isCustom = {buttonObject.isCustom}
                     setButtonsObj={setButtonsObj}
                     setPercentage={setPercentage}
                   />
