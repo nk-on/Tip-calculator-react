@@ -20,7 +20,7 @@ function App() {
   const [percentage, setPercentage] = useState<number>(0);
   return (
     <>
-      <div className="flex flex-col md:flex-row bg-[#FFFFFF] w-[90%] h-[481px] rounded-[25px] md:w-[920px]">
+      <div className="flex flex-col md:flex-row bg-[#FFFFFF] w-[90%] min-h-[481px] md:h-[481px] rounded-[25px] md:w-[920px]">
         <div className="w-[90%] h-[100%] md:w-[50%] flex flex-col justify-evenly  pl-[25px]">
           <Form
             title={"Bill"}
