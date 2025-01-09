@@ -9,7 +9,7 @@ export default function DataContainer({title,amount}:DataProps){
             <p className="text-[#7F9D9F]">/ Person</p>
         </div>
         <div className="text-[#26C2AE] text-[48px] font-bold">
-            {amount}
+            ${amount.toFixed(2)}
         </div>
     </div>);
 }
