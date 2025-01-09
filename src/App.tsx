@@ -19,37 +19,41 @@ function App() {
   const [bill, setBill] = useState<number>(0);
   const [amountOfPeople, setAmountOfPeople] = useState<number>(0);
   const [percentage, setPercentage] = useState<number>(0);
+  const billProps = {
+    title: "Bill",
+    setBill,
+    setAmountOfPeople,
+  };
   return (
     <>
       <div className="flex flex-col md:flex-row bg-[#FFFFFF] w-[90%] min-h-[481px] md:h-[481px] rounded-[25px] md:w-[920px]">
         <div className="w-[90%] h-[100%] md:w-[50%] flex flex-col justify-evenly  pl-[25px]">
           <Form
-            title={"Bill"}
-            setBill={setBill}
-            setAmountOfPeople={setAmountOfPeople}
+            {...billProps}
           />
           <div className="flex flex-col ">
             <div className="text-[#5E7A7D] font-bold">Select tip</div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-[5px]">
               {buttonsObj.map((buttonObject) => {
+                const buttonProps = {
+                  key: buttonObject.id,
+                  percentageRate: buttonObject.rate,
+                  id: buttonObject.id,
+                  isClicked: buttonObject.isClicked,
+                  isCustom: buttonObject.isCustom,
+                  setButtonsObj,
+                  setPercentage,
+                };  
                 return (
                   <PercentageButton
-                    key={buttonObject.id}
-                    percentageRate={buttonObject.rate}
-                    id={buttonObject.id}
-                    isClicked={buttonObject.isClicked}
-                    isCustom = {buttonObject.isCustom}
-                    setButtonsObj={setButtonsObj}
-                    setPercentage={setPercentage}
+                    {...buttonProps}
                   />
                 );
               })}
             </div>
           </div>
           <Form
-            title={"Number of People"}
-            setBill={setBill}
-            setAmountOfPeople={setAmountOfPeople}
+            {...billProps}
           />
         </div>
         <div className=" flex justify-center items-center w-[90%] md:w-[50%] h-[100%]">
