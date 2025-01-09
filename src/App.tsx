@@ -6,11 +6,17 @@ import Form from "./components/Form";
 import DataContainer from "./components/Data";
 import { PercentageButton } from "./components/PercentageButton";
 import buttons from "./buttons";
+interface buttonObjectProp{
+  id:number,
+  rate:number,
+  isClicked:boolean
+}
+type buttonType = buttonObjectProp[];
 function App() {
-  const [buttonsObj, setButtonsObj] = useState([...buttons]);
-  const [bill, setBill] = useState(0);
-  const [amountOfPeople, setAmountOfPeople] = useState(0);
-  const [percentage, setPercentage] = useState(0);
+  const [buttonsObj, setButtonsObj] = useState<buttonType>([...buttons]);
+  const [bill, setBill] = useState<number>(0);
+  const [amountOfPeople, setAmountOfPeople] = useState<number>(0);
+  const [percentage, setPercentage] = useState<number>(0);
   return (
     <>
       <div className="flex flex-col md:flex-row bg-[#FFFFFF] w-[90%] h-[481px] rounded-[25px] md:w-[920px]">
@@ -45,14 +51,14 @@ function App() {
         </div>
         <div className=" flex justify-center items-center w-[90%] md:w-[50%] h-[100%]">
           <div className="bg-[#00474B] w-[90%] h-[90%] rounded-[25px] px-[25px]">
-              <DataContainer
-                title="Tip Amount"
-                amount={(bill * percentage) / 100}
-              />
-              <DataContainer
-                title="Total Amount"
-                amount={((bill * percentage) / 100) * amountOfPeople}
-              />
+            <DataContainer
+              title="Tip Amount"
+              amount={(bill * percentage) / 100}
+            />
+            <DataContainer
+              title="Total Amount"
+              amount={((bill * percentage) / 100) * amountOfPeople}
+            />
           </div>
         </div>
       </div>
