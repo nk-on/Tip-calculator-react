@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import Reset from "./components/Reset";
 import Form from "./components/Form";
 import DataContainer from "./components/Data";
 import { PercentageButton } from "./components/PercentageButton";
@@ -52,7 +53,7 @@ function App() {
           />
         </div>
         <div className=" flex justify-center items-center w-[90%] md:w-[50%] h-[100%]">
-          <div className="bg-[#00474B] w-[90%] h-[90%] rounded-[25px] px-[25px]">
+          <div className="flex flex-col items-center justify-evenly bg-[#00474B] w-[90%] h-[90%] rounded-[25px] px-[25px]">
             <DataContainer
               title="Tip Amount"
               amount={(bill * percentage) / 100}
@@ -61,6 +62,7 @@ function App() {
               title="Total Amount"
               amount={((bill * percentage) / 100) * amountOfPeople}
             />
+            <Reset setBill={setBill} setPercentage={setPercentage} setAmountOfPeople={setAmountOfPeople} setButtonsObj = {setButtonsObj}/>
           </div>
         </div>
       </div>
