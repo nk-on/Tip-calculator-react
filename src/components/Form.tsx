@@ -15,7 +15,7 @@ export default function Form({ title, setBill, setAmountOfPeople }: FormProps) {
       </div>
       <input
         type="number"
-        className={`bg-[#F3F9FA] w-[90%] h-[48px] ${
+        className={`bg-[#F3F9FA] w-[90%] h-[48px] px-[10px] ${
           error && "border border-red-500"
         }`}
         onChange={(event) => {
