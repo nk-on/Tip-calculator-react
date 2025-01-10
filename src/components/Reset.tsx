@@ -2,11 +2,6 @@ interface FormProps {
   setBill: React.Dispatch<React.SetStateAction<number>>;
   setPercentage: React.Dispatch<React.SetStateAction<number>>;
   setAmountOfPeople: React.Dispatch<React.SetStateAction<number>>;
-  setButtonsObj: React.Dispatch<
-    React.SetStateAction<
-      { id: number; rate: number; isClicked: boolean; isCustom: boolean }[]
-    >
-  >;
 }
 export default function Reset({
   setBill,

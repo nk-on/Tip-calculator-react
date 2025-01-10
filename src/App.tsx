@@ -1,6 +1,4 @@
-import { useRef, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useState } from "react";
 import "./App.css";
 import Reset from "./components/Reset";
 import Form from "./components/Form";
@@ -59,7 +57,6 @@ function App() {
               setBill={setBill}
               setPercentage={setPercentage}
               setAmountOfPeople={setAmountOfPeople}
-              setButtonsObj={setButtonsObj}
             />
           </div>
         </div>
