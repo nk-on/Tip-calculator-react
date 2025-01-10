@@ -1,22 +1,13 @@
-import items from "../buttons.ts";
 interface percentageProps {
   percentageRate: number;
-  id: number;
-  isClicked: boolean;
   isCustom: boolean;
-  setButtonsObj: React.Dispatch<
-    React.SetStateAction<
-      { id: number; rate: number; isClicked: boolean; isCustom: boolean }[]
-    >
-  >;
+  percentage: number;
   setPercentage: React.Dispatch<React.SetStateAction<number>>;
 }
 export function PercentageButton({
   percentageRate,
-  id,
-  isClicked,
   isCustom,
-  setButtonsObj,
+  percentage,
   setPercentage,
 }: percentageProps) {
   /* 1. when user clicks on percentage rate it should be green untill user clicks on another button and this other button
@@ -30,7 +21,7 @@ export function PercentageButton({
           type="number"
           placeholder="Custom"
           className="w-[117px] h-[48px] text-[#547878] rounded-[5px] text-[24px] bg-[#F3F9FA] font-bolder"
-          onChange={(event)=>{
+          onChange={(event) => {
             const value = Number(event.target.value);
             setPercentage(value);
           }}
@@ -41,19 +32,10 @@ export function PercentageButton({
   return (
     <button
       className={`w-[117px] h-[48px] text-[#FFFFFF] font-extrabold rounded-[5px] text-[24px] ${
-        isClicked ? "bg-[#26C2AE]" : "bg-[#00474B]"
+        percentage === percentageRate ? "bg-[#26C2AE]" : "bg-[#00474B]"
       }`}
       onClick={() => {
-        const updatedItems = items.map((item) => {
-          if (item.id === id) {
-            item.isClicked = true;
-          } else {
-            item.isClicked = false;
-          }
-          return item;
-        });
         setPercentage(percentageRate);
-        setButtonsObj([...updatedItems]);
       }}
     >
       {percentageRate}%

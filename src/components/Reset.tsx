@@ -8,12 +8,10 @@ interface FormProps {
     >
   >;
 }
-import items from "../buttons";
 export default function Reset({
   setBill,
   setPercentage,
   setAmountOfPeople,
-  setButtonsObj
 }: FormProps) {
   return (
     <button
@@ -21,11 +19,6 @@ export default function Reset({
         setBill(0);
         setPercentage(0);
         setAmountOfPeople(0);
-        const updatedItems = items.map((item)=>{
-            item.isClicked = false;
-            return item;
-        })
-        setButtonsObj([...updatedItems]);
       }}
       className="bg-[#26C2AE] w-[80%] h-[48px]"
     >

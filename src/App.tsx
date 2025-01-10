@@ -35,8 +35,8 @@ function App() {
                 const buttonProps = {
                   percentageRate: buttonObject.rate,
                   id: buttonObject.id,
-                  isClicked: buttonObject.isClicked,
                   isCustom: buttonObject.isCustom,
+                  percentage:percentage,
                   setButtonsObj,
                   setPercentage,
                 };
