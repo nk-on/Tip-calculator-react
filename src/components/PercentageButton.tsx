@@ -12,7 +12,6 @@ export function PercentageButton({
   percentage,
   setPercentage,
 }: percentageProps) {
-  const [error,setError] = useState(false);
   /* 1. when user clicks on percentage rate it should be green untill user clicks on another button and this other button
     should become green
     2.add all buttons in button object isClicked false if id === button propsid then change it to trues
@@ -23,18 +22,14 @@ export function PercentageButton({
         <input
           type="number"
           placeholder="Custom"
-          className={`w-[117px] h-[48px] text-[#547878] rounded-[5px] text-[24px] bg-[#F3F9FA] font-bolder ${
-            error && "border border-red-500"
-          }`}
+          className={`w-[117px] h-[48px] text-[#547878] rounded-[5px] text-[24px] bg-[#F3F9FA] font-bolder`}
           onChange={(event) => {
             const value = Number(event.target.value);
             if(value <= 0){
-              setError(true);
-              event.target.value = ''
+              event.target.value = "";
               return;
             }
-            setError(false);
-            setPercentage(value);
+            setPercentage(percentageRate)
           }}
         />
       </form>
