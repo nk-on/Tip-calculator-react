@@ -27,7 +27,7 @@ export function PercentageButton({
               event.target.value = "";
               return;
             }
-            setPercentage(percentageRate);
+            setPercentage(value);
           }}
         />
       </form>
