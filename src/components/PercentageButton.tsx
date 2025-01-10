@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 interface percentageProps {
   percentageRate: number;
   isCustom: boolean;
@@ -25,11 +23,11 @@ export function PercentageButton({
           className={`w-[117px] h-[48px] text-[#547878] rounded-[5px] text-[24px] bg-[#F3F9FA] font-bolder`}
           onChange={(event) => {
             const value = Number(event.target.value);
-            if(value <= 0){
+            if (value <= 0) {
               event.target.value = "";
               return;
             }
-            setPercentage(percentageRate)
+            setPercentage(percentageRate);
           }}
         />
       </form>

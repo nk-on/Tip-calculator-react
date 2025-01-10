@@ -10,7 +10,6 @@ import buttons from "./buttons";
 interface buttonObjectProp {
   id: number;
   rate: number;
-  isClicked: boolean;
   isCustom: boolean;
 }
 type buttonType = buttonObjectProp[];
