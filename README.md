@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# 💸 Tip Calculator: Calculate Your Tip with Ease!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This simple, web-based **Tip Calculator**, built with **React** and **TypeScript**, is designed to help users quickly calculate:
+- The **tip amount per person**  
+- The **total tip amount**  
 
-Currently, two official plugins are available:
+Simply enter the bill amount, choose the tip percentage, and specify the number of people. The calculator will instantly provide the results so you can easily split the bill!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ⚡ Features  
+- 💰 **Bill Input**: Enter the total bill amount.  
+- 📊 **Tip Percentage**: Choose the desired tip percentage (e.g., 15%, 20%).  
+- 👥 **Number of People**: Specify how many people will split the bill.  
+- 💵 **Tip Per Person**: Get the tip amount each person should pay.  
+- 🔢 **Total Tip Amount**: Calculate the total tip amount for the group.  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Tech Stack  
+- **React**: Frontend library for building the user interface.  
+- **TypeScript**: Provides type safety and better maintainability.  
+- **CSS/SCSS**: Adds simple, clean styling to the app.  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🚀 How to Use  
+1. Clone the repo:  
+   ```bash
+   git clone https://github.com/yourusername/tip-calculator-react.git  
