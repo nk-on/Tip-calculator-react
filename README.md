@@ -20,11 +20,7 @@ Simply enter the bill amount, choose the tip percentage, and specify the number 
 ## 🛠️ Tech Stack  
 - **React**: Frontend library for building the user interface.  
 - **TypeScript**: Provides type safety and better maintainability.  
-- **CSS/SCSS**: Adds simple, clean styling to the app.  
+- **Tailwind**: Adds simple, clean styling to the app.  
 
 ---
 
-## 🚀 How to Use  
-1. Clone the repo:  
-   ```bash
-   git clone https://github.com/yourusername/tip-calculator-react.git  
